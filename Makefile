@@ -6,6 +6,7 @@ all: report
 
 report:
 	pdflatex $(DOCNAME).tex
+	cp main.pdf target-per-maand.pdf
 
 view: report
 	evince $(DOCNAME).pdf

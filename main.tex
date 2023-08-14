@@ -3,14 +3,27 @@
 \usepackage{sectsty}
 \usepackage{graphicx}
 \usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage{tikz}
 
-% Margins
-\topmargin=-0.45in
-\evensidemargin=-0.5in
-\oddsidemargin=-0.5in
-\textwidth=7.5in
-\textheight=9.0in
-\headsep=0.25in
+\usepackage[a4paper, textwidth=8.2in,textheight=10.0in]{geometry}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+
+\usepackage{fancyhdr}
+\fancyhf{}
+\fancyhead[C]{\small \textbf{Tweede helft augustus}}
+\fancyfoot[C]{\tiny \thepage \hspace{1cm} Jacob Lotz \hspace{1cm} Data van \href{dutchavifauna.nl}{https://www.dutchavifauna.nl/}}
+\renewcommand\headrulewidth{0pt}
+\pagestyle{fancy}
 
 \title{Zeldzaamheden per maand}
 \author{Jacob Lotz}
@@ -35,8 +48,6 @@
 
 
 \begin{document}
-	\maketitle	
-
 	\newpage
 	\input{months/august-end.tex}
 

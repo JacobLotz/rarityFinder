@@ -1,26 +1,34 @@
 \documentclass[11pt]{article}
-
+\usepackage[a4paper, textwidth=8.2in,textheight=10.0in]{geometry}
 \usepackage{sectsty}
 \usepackage{graphicx}
 \usepackage{subcaption}
-\usepackage{hyperref}
 \usepackage{tikz}
-
-\usepackage[a4paper, textwidth=8.2in,textheight=10.0in]{geometry}
-
+\usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
     filecolor=magenta,      
     urlcolor=blue,
-    pdftitle={Overleaf Example},
     pdfpagemode=FullScreen,
     }
 
 
+
+% ----------------------------------------------------------------------------
+% Input
+%\newcommand{\periode}{august-end}
+%\newcommand{\naam}{augustus tweede helft}
+\input{switch}
+\newcommand{\pad}{/home/jelotz/Documents/stack/birds/dutchavifauna-data/}
+% ----------------------------------------------------------------------------
+
+
+
+% Header
 \usepackage{fancyhdr}
 \fancyhf{}
-\fancyhead[C]{\small \textbf{augustus - tweede helft}}
+\fancyhead[C]{\small \textbf{\naam}}
 \fancyfoot[C]{\tiny \thepage \hspace{1cm} Jacob Lotz \hspace{1cm} Data van \href{https://www.dutchavifauna.nl/}{dutchavifauna.nl}}
 \renewcommand\headrulewidth{0pt}
 \pagestyle{fancy}
@@ -29,7 +37,8 @@
 \author{Jacob Lotz}
 \date{\today}
 
-\newcommand{\figpath}{/home/jelotz/Documents/prog/dataDutchAvifauna}
+
+\newcommand{\figpath}{\pad\periode}
 
 \newcommand{\subfig}[2]{
     \begin{subfigure}[t]{0.49\textwidth}
@@ -46,9 +55,8 @@
 }
 
 
-
 \begin{document}
 	\newpage
-	\input{months/august-end.tex}
+	\input{months/\periode}
 
 \end{document}

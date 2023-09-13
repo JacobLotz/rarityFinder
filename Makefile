@@ -12,6 +12,10 @@ septemberstart:
 	pdflatex "\def\septemberstart{1} \input{$(DOCNAME).tex}"
 	cp main.pdf september-start.pdf
 
+septemberend:
+	pdflatex "\def\septemberend{1} \input{$(DOCNAME).tex}"
+	cp main.pdf september-end.pdf
+
 report:
 	pdflatex $(DOCNAME).tex
 	cp main.pdf target-per-maand.pdf
@@ -23,4 +27,4 @@ okular: report
 	okular $(DOCNAME).pdf&
 
 clean:
-	rm *.blg *.bbl *.aux *.log *.out *.spl
+	rm *.blg *.bbl *.aux *.log *.out *.spl *.pdf

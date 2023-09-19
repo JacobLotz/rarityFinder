@@ -10,11 +10,15 @@ augustend:
 
 septemberstart:
 	pdflatex "\def\septemberstart{1} \input{$(DOCNAME).tex}"
-	cp main.pdf september-start.pdf
+	cp main.pdf 09a-september-start.pdf
 
 septemberend:
 	pdflatex "\def\septemberend{1} \input{$(DOCNAME).tex}"
-	cp main.pdf september-end.pdf
+	cp main.pdf 09b-september-end.pdf
+
+octoberstart:
+	pdflatex "\def\octoberstart{1} \input{$(DOCNAME).tex}"
+	cp main.pdf 10a-october-start.pdf
 
 report:
 	pdflatex $(DOCNAME).tex
